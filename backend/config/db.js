@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const conectarBD = async () => {
+export const conectarBD = async () => {
   const url = process.env.MONGO_URI;
   try {
     const connection = await mongoose.connect(url, {
@@ -15,5 +15,3 @@ const conectarBD = async () => {
     process.exit(1);
   }
 };
-
-export default conectarBD;
